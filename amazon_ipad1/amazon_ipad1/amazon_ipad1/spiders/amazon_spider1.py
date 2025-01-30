@@ -1,4 +1,8 @@
+import json
 import scrapy
+from urllib.parse import urljoin
+import re
+
 
 
 class AmazonSpider1Spider(scrapy.Spider):
