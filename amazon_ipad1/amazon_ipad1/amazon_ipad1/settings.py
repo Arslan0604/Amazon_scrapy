@@ -12,6 +12,11 @@ BOT_NAME = "amazon_ipad1"
 SPIDER_MODULES = ["amazon_ipad1.spiders"]
 NEWSPIDER_MODULE = "amazon_ipad1.spiders"
 
+SCRAPEOPS_API_KEY = "YOU_API_KEY"
+SCRAPEOPS_PROXY_ENABLED = True
+
+
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "amazon_ipad1 (+http://www.yourdomain.com)"
@@ -53,6 +58,9 @@ ROBOTSTXT_OBEY = True
 #DOWNLOADER_MIDDLEWARES = {
 #    "amazon_ipad1.middlewares.AmazonIpad1DownloaderMiddleware": 543,
 #}
+DOWNLOADER_MIDDLEWARES = {
+    "scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk": 725,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
